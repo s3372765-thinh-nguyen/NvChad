@@ -18,6 +18,7 @@ local options = {
 
   indent = {
     enable = true,
+    disable = {"python", }, -- Hal 07/10/22: Disable python indent because it's not working properly
   },
 }
 

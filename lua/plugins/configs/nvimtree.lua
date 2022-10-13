@@ -20,17 +20,20 @@ local options = {
   update_cwd = true,
   update_focused_file = {
     enable = true,
-    update_cwd = false,
+    update_cwd = true,
   },
   view = {
     adaptive_size = true,
     side = "left",
     width = 25,
     hide_root_folder = true,
+    number = true,
+    relativenumber = true,
   },
   git = {
-    enable = false,
+    enable = true,
     ignore = true,
+    show_on_dirs = true,
   },
   filesystem_watchers = {
     enable = true,
@@ -41,8 +44,9 @@ local options = {
     },
   },
   renderer = {
-    highlight_git = false,
-    highlight_opened_files = "none",
+    add_trailing = true,
+    highlight_git = true,
+    highlight_opened_files = "all",
 
     indent_markers = {
       enable = false,
@@ -53,7 +57,7 @@ local options = {
         file = true,
         folder = true,
         folder_arrow = true,
-        git = false,
+        git = true,
       },
 
       glyphs = {
