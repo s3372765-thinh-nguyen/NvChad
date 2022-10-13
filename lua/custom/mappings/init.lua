@@ -27,10 +27,11 @@ local M = {}
         i = { [ "<c-w>" ] = { "<c-g>u<c-w>" } }
     }
 
+    -- F5 calls :te[rminal] command to run current python file 
     M.python_run = {
-        n = { [ "<F5>" ] = { ":w<CR>:!clear<CR>:!python3 %<CR>" } },
-        i = { [ "<F5>" ] = { "<Esc>:w<CR>:!clear<CR>:!python3 %<CR>" } },
-        v = { [ "<F5>" ] = { "<Esc>:w<CR>:!clear<CR>:!python3 %<CR>" } }
+        n = { [ "<F5>" ] = { ":te python3 %<CR>" } },
+        i = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>" } },
+        v = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>" } }
     }
 
     M.git = {
