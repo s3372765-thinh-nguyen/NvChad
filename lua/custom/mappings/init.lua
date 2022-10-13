@@ -1,0 +1,66 @@
+-- lua/custom/mappings 
+local M = {}
+
+    -- Ctrl+S in normal and insert mode calls :w to save the file
+    M.save = {
+        n = { [ "<c-s>" ] = { ":w<cr>" } },
+        i = { [ "<c-s>" ] = { "<esc>:w<cr>a" } }
+    }
+
+    -- Ctrl+C in insertion mode is mapped to Esc key instead to ensure LSP is reloaded properly
+    M.refresh_lsp = {
+        i = { [ "<c-c>" ] = { "<esc>" } }
+    }
+
+    -- Esc x2 should remove all search highlighting
+    M.search = {
+        n = { [ "<esc><esc>" ] = { ":noh<return><esc>" } }
+    }
+
+    -- Ctrl-u (delete the line before the cursor) will also create an undo breakpoint
+    M.undo_breakpoint_insert_mode_line_delete = {
+        i = { [ "<c-u>" ] = { "<c-g>u<c-u>" } }
+    }
+
+    -- Ctrl-w (delete the word before the cursor) will also create an undo breakpoint
+    M.undo_breakpoint_insert_mode_word_delete = {
+        i = { [ "<c-w>" ] = { "<c-g>u<c-w>" } }
+    }
+
+    M.python_run = {
+        n = { [ "<F5>" ] = { ":w<CR>:!clear<CR>:!python3 %<CR>" } },
+        i = { [ "<F5>" ] = { "<Esc>:w<CR>:!clear<CR>:!python3 %<CR>" } },
+        v = { [ "<F5>" ] = { "<Esc>:w<CR>:!clear<CR>:!python3 %<CR>" } }
+    }
+
+    M.git = {
+        n = { [ "<leader>g" ] = { ":G<CR>" } }
+    }
+
+   ------------
+  -- Examples: --
+    ------------
+-- add this table only when you want to disable default keys
+-- M.disabled = {
+--   n = {
+--       ["<leader>h"] = "",
+--       ["<C-s>"] = ""
+--   }
+-- }
+
+-- M.abc = {
+--
+--   n = {
+--      ["<C-n>"] = {"<cmd> Telescope <CR>", "Open Telescope"}
+--   },
+--
+--   i = {
+--     -- more keys!
+--   }
+-- }
+
+-- M.xyz = {
+--   -- stuff
+-- }
+
+return M
