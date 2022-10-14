@@ -15,7 +15,7 @@ return {
     -- Show git diff on file
     ['airblade/vim-gitgutter'] = {},
     -- Enable vim motion to treat camelCase_and_underscored_variable_names as multiple words instead of a single word for ease of variables navigation using w/b/e
-    ['chaoren/vim-wordmotion'] = {},
+    -- ['chaoren/vim-wordmotion'] = false,
     -- Enable git operations from inside vim
     ['tpope/vim-fugitive'] = {},
 
