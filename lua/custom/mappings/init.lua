@@ -76,6 +76,17 @@ M.interminal = {
     t = { [ "<esc>" ] = { "<c-\\><c-n>" } },
 }
 
+M.open_keymapping_file = {
+    n = { [ "<leader>key" ] = { ":e ~/.config/nvim/lua/custom/mappings/init.lua<cr>", "Open custom keymapping file"} }
+}
+
+M.open_plugin_file = {
+    n = { [ "<leader>plug" ] = { ":e ~/.config/nvim/lua/custom/plugins/init.lua<cr>", "Open custom plugin file"} }
+}
+
+M.open_plugin_file = {
+    n = { [ "<leader>vimrc" ] = { ":e ~/.config/nvim/lua/custom/init.lua<cr>", "Open custom lua vimrc file"} }
+}
 
 ------------
 -- Examples: --
