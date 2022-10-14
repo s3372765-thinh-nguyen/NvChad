@@ -27,9 +27,9 @@ local M = {}
         i = { [ "<c-c>" ] = { "<esc>" } }
     }
 
-    -- Esc x2 should remove all search highlighting
+    -- Ctrl+C x2 should remove all search highlighting
     M.search = {
-        n = { [ "<esc><esc>" ] = { ":noh<return><esc>" } }
+        n = { [ "<c-c><c-c>" ] = { ":noh<return><esc>" } }
     }
 
     -- Ctrl-u (delete the line before the cursor) will also create an undo breakpoint
