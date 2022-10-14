@@ -49,6 +49,12 @@ local M = {}
         v = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>" } }
     }
 
+    M.python_run_test = {
+        n = { [ "<F8>" ] = { ":te python3 -m pytest %<CR>" } },
+        i = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>" } },
+        v = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>" } }
+    }
+
     M.git = {
         n = { [ "<leader>g" ] = { ":G<CR>" } }
     }
