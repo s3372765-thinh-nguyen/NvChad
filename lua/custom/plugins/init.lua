@@ -18,6 +18,8 @@ return {
     ['chaoren/vim-wordmotion'] = {},
     -- Enable git operations from inside vim
     ['tpope/vim-fugitive'] = {},
+    -- Enable navigation using search
+    ['ggandor/lightspeed.nvim'] = {},
     ------------
   -- Examples: --
     ------------
