@@ -71,6 +71,12 @@ M.loadsession = {
     v = { [ "<leader>sl"] = { "<esc><cr>:so ~/session-default.vim<CR>" } }
 }
 
+-- Esc in terminal mode to enter Terminal normal mode which allows scrolling
+M.interminal = {
+    t = { [ "<esc>" ] = { "<c-\\><c-n>" } },
+}
+
+
 ------------
 -- Examples: --
 ------------
