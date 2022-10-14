@@ -61,13 +61,13 @@ M.git = {
 
 M.mksession = {
     n = { [ "<leader>ss"] = { ":mksession! ~/session-default.vim<CR>" } },
-    i = { [ "<leader>ss"] = { "<esc><cr>:mksession! ~/session-default.vim<CR>a" } },
+    -- i = { [ "<leader>ss"] = { "<esc><cr>:mksession! ~/session-default.vim<CR>a" } },
     v = { [ "<leader>ss"] = { "<esc><cr>:mksession! ~/session-default.vim<CR>a" } }
 }
 
 M.loadsession = {
     n = { [ "<leader>sl"] = { ":so ~/session-default.vim<CR>" } },
-    i = { [ "<leader>sl"] = { "<esc><cr>:so ~/session-default.vim<CR>" } },
+    -- i = { [ "<leader>sl"] = { "<esc><cr>:so ~/session-default.vim<CR>" } },
     v = { [ "<leader>sl"] = { "<esc><cr>:so ~/session-default.vim<CR>" } }
 }
 
