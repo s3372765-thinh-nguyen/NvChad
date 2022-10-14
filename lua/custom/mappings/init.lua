@@ -1,6 +1,21 @@
 -- lua/custom/mappings 
 local M = {}
 
+-- add this table only when you want to disable default keys
+    M.disabled = {
+      n = {
+          ["<C-c>"] = ""
+      },
+      i = {
+          ["<C-c>"] = ""
+      },
+      v = {
+          ["<C-c>"] = ""
+      }
+    }
+
+----------------------------------------------------------------------------------------------------
+
     -- Ctrl+S in normal and insert mode calls :w to save the file
     M.save = {
         n = { [ "<c-s>" ] = { ":w<cr>" } },
