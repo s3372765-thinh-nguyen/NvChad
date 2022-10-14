@@ -44,13 +44,13 @@ M.undo_breakpoint_insert_mode_word_delete = {
 
 -- F5 calls :te[rminal] command to run current python file 
 M.python_run = {
-    n = { [ "<F5>" ] = { ":te python3 %<CR>" } },
+    n = { [ "<F5>" ] = { ":w<CR>:te python3 %<CR>" } },
     i = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>" } },
     v = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>" } }
 }
 
 M.python_run_test = {
-    n = { [ "<F8>" ] = { ":te python3 -m pytest %<CR>" } },
+    n = { [ "<F8>" ] = { ":w<CR>:te python3 -m pytest %<CR>" } },
     i = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>" } },
     v = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>" } }
 }
