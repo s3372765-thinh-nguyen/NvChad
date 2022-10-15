@@ -49,16 +49,19 @@ M.python_run = {
     v = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>" } }
 }
 
+-- F8 calls :te[rminal] command to run pytest on current python file 
 M.python_run_test = {
     n = { [ "<F8>" ] = { ":w<CR>:te python3 -m pytest %<CR>" } },
     i = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>" } },
     v = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>" } }
 }
 
+-- <leader>g to open gitgutter interface (with summary of files and commits)
 M.git = {
     n = { [ "<leader>g" ] = { ":G<CR>" } }
 }
 
+-- <leader>ss and <leader>sl to save and load current session
 M.mksession = {
     n = { [ "<leader>ss"] = { ":mksession! ~/session-default.vim<CR>" } },
     -- i = { [ "<leader>ss"] = { "<esc><cr>:mksession! ~/session-default.vim<CR>a" } },
@@ -76,14 +79,17 @@ M.interminal = {
     t = { [ "<esc>" ] = { "<c-\\><c-n>" } },
 }
 
+-- <leader>key to open the keymapping file
 M.open_keymapping_file = {
     n = { [ "<leader>key" ] = { ":e ~/.config/nvim/lua/custom/mappings/init.lua<cr>", "Open custom keymapping file"} }
 }
 
+-- <leader>plug to open the plugin file
 M.open_plugin_file = {
     n = { [ "<leader>plug" ] = { ":e ~/.config/nvim/lua/custom/plugins/init.lua<cr>", "Open custom plugin file"} }
 }
 
+-- <leader>vimrc to open the lua vimrc file
 M.open_plugin_file = {
     n = { [ "<leader>vimrc" ] = { ":e ~/.config/nvim/lua/custom/init.lua<cr>", "Open custom lua vimrc file"} }
 }
