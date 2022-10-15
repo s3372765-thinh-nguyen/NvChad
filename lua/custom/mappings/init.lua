@@ -44,37 +44,37 @@ M.undo_breakpoint_insert_mode_word_delete = {
 
 -- F5 calls :te[rminal] command to run current python file 
 M.python_run = {
-    n = { [ "<F5>" ] = { ":w<CR>:te python3 %<CR>" } },
-    i = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>" } },
-    v = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>" } }
+    n = { [ "<F5>" ] = { ":w<CR>:te python3 %<CR>", "Run current python file" } },
+    i = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>", "Run current python file" } },
+    v = { [ "<F5>" ] = { "<Esc>:w<CR>:te python3 %<CR>", "Run current python file" } }
 }
 
--- F8 calls :te[rminal] command to run pytest on current python file 
+-- F8 calls :te[rminal] command to run pytest on the current python file 
 M.python_run_test = {
-    n = { [ "<F8>" ] = { ":w<CR>:te python3 -m pytest %<CR>" } },
-    i = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>" } },
-    v = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>" } }
+    n = { [ "<F8>" ] = { ":w<CR>:te python3 -m pytest %<CR>", "Run pytest on the current python file" } },
+    i = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>", "Run pytest on the current python file" } },
+    v = { [ "<F8>" ] = { "<Esc>:w<CR>:te python3 -m pytest %<CR>", "Run pytest on the current python file" } }
 }
 
 -- <leader>g to open gitgutter interface (with summary of files and commits)
 M.git = {
-    n = { [ "<leader>g" ] = { ":G<CR>" } }
+    n = { [ "<leader>g" ] = { ":G<CR>", "Open Gitgutter interface (with summary of files and commits)" } }
 }
 
 -- <leader>ss and <leader>sl to save and load current session
 M.mksession = {
-    n = { [ "<leader>ss"] = { ":mksession! ~/session-default.vim<CR>" } },
+    n = { [ "<leader>ss"] = { ":mksession! ~/session-default.vim<CR>", "save current working session" } },
     -- i = { [ "<leader>ss"] = { "<esc><cr>:mksession! ~/session-default.vim<CR>a" } },
-    v = { [ "<leader>ss"] = { "<esc><cr>:mksession! ~/session-default.vim<CR>a" } }
+    v = { [ "<leader>ss"] = { "<esc><cr>:mksession! ~/session-default.vim<CR>a", "save current working session"  } }
 }
 
 M.loadsession = {
-    n = { [ "<leader>sl"] = { ":so ~/session-default.vim<CR>" } },
+    n = { [ "<leader>sl"] = { ":so ~/session-default.vim<CR>", "load current working session" } },
     -- i = { [ "<leader>sl"] = { "<esc><cr>:so ~/session-default.vim<CR>" } },
-    v = { [ "<leader>sl"] = { "<esc><cr>:so ~/session-default.vim<CR>" } }
+    v = { [ "<leader>sl"] = { "<esc><cr>:so ~/session-default.vim<CR>", "load current working session" } }
 }
 
--- Esc in terminal mode to enter Terminal normal mode which allows scrolling
+-- Esc in terminal mode to enter Terminal-normal mode which allows scrolling
 M.interminal = {
     t = { [ "<esc>" ] = { "<c-\\><c-n>" } },
 }
