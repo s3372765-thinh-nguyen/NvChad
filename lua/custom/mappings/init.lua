@@ -94,6 +94,17 @@ M.open_plugin_file = {
     n = { [ "<leader>vimrc" ] = { ":e ~/.config/nvim/lua/custom/init.lua<cr>", "Open custom lua vimrc file"} }
 }
 
+-- <leader>y transfers whatever is copied outside vim into the yank register (register 0)
+M.transform_external_copy_to_internal_yank_register = {
+    n = { [ "<leader>y"] = { ":let @0 = @*<CR>", "Transfer external clipboard content to yank register (register 0)"} }
+}
+-- p/P pastes only the yanked text instead of both yanked and deleted/changed text
+M.paste_lowercase_yanked = {
+    n = {["p"] = {'\"0p'}}
+}
+M.paste_uppercase_yanked = {
+    n = {["P"] = {'\"0P'}}
+}
 ------------
 -- Examples: --
 ------------
