@@ -90,8 +90,8 @@ M.open_plugin_file = {
 }
 
 -- <leader>vimrc to open the lua vimrc file
-M.open_plugin_file = {
-    n = { [ "<leader>vimrc" ] = { ":e ~/.config/nvim/lua/custom/init.lua<cr>", "Open custom lua vimrc file"} }
+M.open_vimrc_file = {
+    n = { [ "<leader>vim" ] = { ":e ~/.config/nvim/lua/custom/init.lua<cr>", "Open custom lua vimrc file"} }
 }
 
 -- <leader>y transfers whatever is copied outside vim into the yank register (register 0)
