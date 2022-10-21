@@ -105,30 +105,5 @@ M.paste_lowercase_yanked = {
 M.paste_uppercase_yanked = {
     n = {["P"] = {'\"0P'}}
 }
-------------
--- Examples: --
-------------
--- add this table only when you want to disable default keys
--- M.disabled = {
---   n = {
---       ["<leader>h"] = "",
---       ["<C-s>"] = ""
---   }
--- }
-
--- M.abc = {
---
---   n = {
---      ["<C-n>"] = {"<cmd> Telescope <CR>", "Open Telescope"}
---   },
---
---   i = {
---     -- more keys!
---   }
--- }
-
--- M.xyz = {
---   -- stuff
--- }
 
 return M
