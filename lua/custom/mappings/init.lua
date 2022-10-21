@@ -81,7 +81,7 @@ M.interminal = {
 
 -- <leader>key to open the keymapping file
 M.open_keymapping_file = {
-    n = { [ "<leader>key" ] = { ":e ~/.config/nvim/lua/custom/mappings/init.lua<cr>", "Open custom keymapping file"} }
+    n = { [ "<leader>map" ] = { ":e ~/.config/nvim/lua/custom/mappings/init.lua<cr>", "Open custom keymapping file"} }
 }
 
 -- <leader>plug to open the plugin file
@@ -104,6 +104,16 @@ M.paste_lowercase_yanked = {
 }
 M.paste_uppercase_yanked = {
     n = {["P"] = {'\"0P'}}
+}
+
+-- <leader>j/k to :cn and :cp
+M.quick_fix_cnext = {
+    n = { ["<leader>j"] = {":cn<CR>"}}
+}
+
+-- <leader>j/k to :cn and :cp
+M.quick_fix_cprevious = {
+    n = { ["<leader>k"] = {":cp<CR>"}}
 }
 
 return M
